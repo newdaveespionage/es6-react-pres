@@ -19,8 +19,6 @@ app.use(mount('/public',serve('./public')));
 app.use(route.get('/', function *() {
 	var rendered = React.renderToString(React.createElement(ClientApp));
 	this.body = _.template(baseTemplate)({body:rendered});
-
-	yield;
 }));
 
 app.listen(3000);
