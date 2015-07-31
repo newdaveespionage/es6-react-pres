@@ -15,7 +15,7 @@ gulp.task('scripts', function() {
   bundler.add(entryFile);
 
   var stream = bundler.bundle();
-  stream.on('error', function (err) { console.error(err.toString()) });
+  stream.on('error', function (err) { console.error(err.toString()); });
 
   stream
     .pipe(source(entryFile))
